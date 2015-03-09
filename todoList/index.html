@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>To-do List</h1>
+        <button id="newItem">New item</button>
+        <ul id="items">
+            <div class="spinner"></div>
+        </ul>
+        <button id="clearCompleted">Clear completed items</button>
+        <div id="overlay"></div>
+        <div id="modal">
+            <div id="modalHead">
+                <h2>New item</h2>
+                <div id="modalClose">
+                    &#x2716;
+                </div>
+            </div>
+            <div id="modalBody">
+                <h3>Title:</h3>
+                <input type="text" id="title"/>
+                <h3>Description:</h3>
+                <input type="text" id="desc"/>
+                <button id="createItem">Create item</button>
+            </div>
+        </div>
+        <!-- At the end of the file for faster load time -->
+        <script src="todo.js"></script>
+    </body>
+</html>

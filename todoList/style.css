@@ -1,0 +1,194 @@
+@import url(http://fonts.googleapis.com/css?family=Righteous);
+h1{
+    font-family: 'Righteous', cursive;
+    text-align:center;
+    margin: 5px auto 0px;
+    font-size: 4em;
+}
+button {
+	padding: 0.5em 1em;
+	color: #000000;
+	border: 2px solid #999999;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin: 10px auto 15px;
+	width: 120px;
+	display:block;
+	background: #00FF08;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+	font-size: 15px;
+	cursor:pointer;
+}
+button:focus {
+	outline: 0;
+}
+button:hover {
+	color: #FFFFFF;
+	background: #088A08;
+	outline: 0;
+}
+#clearCompleted {
+    background: #FF0000;
+    width:200px;
+}
+#clearCompleted:hover {
+    background: #DF0101;
+}
+ul {
+    width: 300px;
+    margin: 15px auto 0px;
+    list-style-type: none;
+    border: 1px solid black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0px;
+}
+input[type=text]{
+	width:360px;
+	font-size:15px;
+	padding:5px;
+	margin-bottom:20px;
+	border:2px solid #E6E6E6;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+input[type=text]:focus{
+	outline:0;
+}
+ul li{
+    padding:4px;
+}
+ul li:not(:last-child){
+    border-bottom: 1px solid #BDBDBD;
+}
+.arrow {
+	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid black;
+	float:left;
+	margin-top:3px;
+	margin-right:4px;
+	cursor:pointer;
+	-ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+}
+.arrow.down{
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.complete {
+    color:#00ff00;
+}
+.remove {
+    color:#ff0000;
+}
+.complete, .remove{
+    float:right;
+    cursor:pointer;
+    padding-right:3px;
+    padding-top:1px;
+}
+.description{
+    height:0px;
+    overflow:hidden;
+}
+.item[data-completed='1']{
+    background: #00ff00;
+}
+#overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0);
+    display:none;
+    width:100%;
+    height:100%;
+    -webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s;
+}
+#modal {
+    position: absolute;
+    top: -200%;
+    z-index: 2;
+    width:400px;
+    overflow: hidden;
+    background: #fff;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+#modal[data-down='true']{
+    top: 15px;
+}
+#modal > *{
+    padding:10px;
+}
+#modal #modalHead{
+    border-bottom:1px solid #BDBDBD;
+}
+#modal #modalHead h2{
+    margin:0px;
+    display:inline-block;
+}
+#modal #modalHead #modalClose{
+    float:right;
+    color:#ff0000;
+    cursor:pointer;
+}
+#modal #modalBody h3{
+    margin:0px;
+}
+
+/*  Spinner from http://tobiasahlin.com/spinkit/  */
+.spinner {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    margin: 10px auto;
+    -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+    animation: rotateplane 1.2s infinite ease-in-out;
+}
+@-webkit-keyframes rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)    rotateX(180deg) }
+}
+@keyframes rotateplane {
+    0% { 
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+    } 50% { 
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+    } 100% { 
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
